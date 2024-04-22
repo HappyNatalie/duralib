@@ -8,7 +8,7 @@ All data for this pack is stored in the `duralib:{}` data tag.
 Tags labeled with a ! are required for the system to work.
 ````
 > duralib
-  > damage_types
+  > damage_types (PACK DOES NOT SUPPORT 2 OF THE SAME DAMAGE TYPE ON 1 ITEM)
     > place_block
       > enabled:<true/false>
       > amount:<int>
