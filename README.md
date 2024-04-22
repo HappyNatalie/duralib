@@ -49,7 +49,7 @@ Tags labeled with a ! are required for the system to work.
   > broken:<true/false>
   > timer:<int> 
 ````
-You can add your own timed condition by giving the player a tag called `duralib.tracker.<custom_name>` then the custom name will be that tag.
+You can add your own timed condition by giving the player a tag called `duralib.tracker.<custom_name>` then the custom name will be your condition name.
 
 
 
