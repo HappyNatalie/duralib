@@ -34,11 +34,11 @@ All data for this pack is stored in the `duralib:{}` data tag.
     > chestplate:<true/false>
     > leggings:<true/false>
     > boots:<true/false>
-  > ignores_unbreaking:<true/false> - Breaks if Unset!
-  > ignore_chance:<float> - Breaks if Unset!
-  > destroy_on_break:<true/false> - Breaks if Unset!
-  > break_item:<string (valid minecraft item id)> - Breaks if Unset!
-  > broken:<true/false> - Automated
+  > ignores_unbreaking:<true/false> !
+  > ignore_chance:<float> !
+  > destroy_on_break:<true/false> !
+  > break_item:<string (valid minecraft item id)> !
+  > broken:<true/false>
 ````
 
 
