@@ -21,7 +21,7 @@ Tags labeled with a ! are required for the system to work.
     > enemy_attack_player
       > enabled:<true/false>
       > amount:<int>
-    > killed_enemy
+    > killed_entity
       > enabled:<true/false>
       > amount:<int>
     > timed
