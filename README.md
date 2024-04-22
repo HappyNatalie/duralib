@@ -5,6 +5,7 @@ In the most recent update of minecraft (1.20.5) there is the ability to add a cu
 For convenience this datapack requires no additional functions or input beyond the setting of it's peramiters in an item's custom data though there is a function to dynamically damage an item.
 
 All data for this pack is stored in the `duralib:{}` data tag.
+Tags labeled with a ! are required for the system to work.
 ````
 > duralib
   > damage_types
