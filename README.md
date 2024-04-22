@@ -58,3 +58,6 @@ give @p gold_ingot[max_stack_size=1,max_damage=32,custom_data={duralib:{damage_t
 give @p blaze_rod[max_stack_size=1,max_damage=32,custom_data={duralib:{damage_types:{killed_entity:{enabled:true,amount:1}},slots:{mainhand:true},ignores_unbreaking:false,ignore_chance:0.0f,destroy_on_break:true,break_item:"minecraft:diamond"}}] 1
 give @p cobblestone[max_stack_size=1,max_damage=32,custom_data={duralib:{damage_types:{tick:{enabled:true,amount:1,condition:"walking"}},slots:{mainhand:true},ignores_unbreaking:false,ignore_chance:0.0f,destroy_on_break:true,break_item:"minecraft:diamond"}}] 1
 ```` 
+
+
+Current Progress : All functionality is working for the mainhand slot I just need to apply the same code to the other slots and the library is done.
