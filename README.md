@@ -24,10 +24,17 @@ Tags labeled with a ! are required for the system to work.
     > killed_entity
       > enabled:<true/false>
       > amount:<int>
-    > timed
-      > enabled:<true/false>
-      > rate:<int>
+    > generic
       > amount:<int>
+    > tick
+      > enabled:<true/false>
+      > amount:<int>
+      > condition:<tag> !
+        > "no_condition"
+        > "swimming"
+        > "walking"
+        > "crouching"
+        > "using_elytra"
   > slots
     > mainhand:<true/false>
     > offhand:<true/false>
@@ -40,8 +47,9 @@ Tags labeled with a ! are required for the system to work.
   > destroy_on_break:<true/false> !
   > break_item:<string (valid minecraft item id)> !
   > broken:<true/false>
+  > timer:<int> 
 ````
-
+You can add your own timed condition by giving the player a tag called `duralib.tracker.<custom_name>` then the custom name will be that tag.
 
 
 
