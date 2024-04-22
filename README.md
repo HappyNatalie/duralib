@@ -33,45 +33,12 @@ All data for this pack is stored in the `duralib:{}` data tag.
     > chestplate:<true/false>
     > leggings:<true/false>
     > boots:<true/false>
-  > ignores_unbreaking:<true/false> Breaks if Unset!
-  > ignore_chance:<float> Breaks if Unset!
-  > destroy_on_break:<true/false> Breaks if Unset!
-  > break_item:<string (valid minecraft item id)> Breaks if Unset!
-  > broken:<true/false> Automated
-Data structure
-> `duralib`
-  > `damage_types`
-    > `place_block`
-      > `enabled:<true/false>`
-      > `amount:<int>`
-    > `break_block`
-      > `enabled:<true/false>`
-      > `amount:<int>`
-    > `player_attack_enemy`
-      > `enabled:<true/false>`
-      > `amount:<int>`
-    > `enemy_attack_player`
-      > `enabled:<true/false>`
-      > `amount:<int>`
-    > `killed_enemy`
-      > `enabled:<true/false>`
-      > `amount:<int>`
-    > `timed`
-      > `enabled:<true/false>`
-      > `rate:<int>`
-      > `amount:<int>`
-  > `slots`
-    > `mainhand:<true/false>`
-    > `offhand:<true/false>`
-    > `helmet:<true/false>`
-    > `chestplate:<true/false>`
-    > `leggings:<true/false>`
-    > `boots:<true/false>`
-  > `ignores_unbreaking:<true/false>` Breaks if Unset!
-  > `ignore_chance:<float>` Breaks if Unset!
-  > `destroy_on_break:<true/false>` Breaks if Unset!
-  > `break_item:<string (valid minecraft item id)>` Breaks if Unset!
-  > `broken:<true/false>` Automated
+  > ignores_unbreaking:<true/false> - Breaks if Unset!
+  > ignore_chance:<float> - Breaks if Unset!
+  > destroy_on_break:<true/false> - Breaks if Unset!
+  > break_item:<string (valid minecraft item id)> - Breaks if Unset!
+  > broken:<true/false> - Automated
+
 
 
 
