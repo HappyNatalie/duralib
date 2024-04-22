@@ -30,7 +30,7 @@ Tags labeled with a ! are required for the system to work.
       > enabled:<true/false>
       > amount:<int>
       > condition:<tag> !
-        > "no_condition"
+        > "always"
         > "swimming"
         > "walking"
         > "crouching"
