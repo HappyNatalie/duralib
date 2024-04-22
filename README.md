@@ -46,5 +46,5 @@ Data structure
 
 Example of correctly made item (true/false convert into 1b/0b when item is given)
 ````mcfunction
-/give @p diamond[max_stack_size=1,max_damage=32,custom_data={duralib:{damage_types:{player_attack_enemy:{enabled:true,amount:1}},slots:{mainhand:true},ignores_unbreaking:false,ignore_chance:0.0f,destory_on_break:true,break_item:"minecraft:diamond"}}] 1
+give @p diamond[max_stack_size=1,max_damage=32,custom_data={duralib:{damage_types:{player_attack_enemy:{enabled:true,amount:1}},slots:{mainhand:true},ignores_unbreaking:false,ignore_chance:0.0f,destory_on_break:true,break_item:"minecraft:diamond"}}] 1
 ```` 
