@@ -52,9 +52,9 @@ You can add your own timed condition by giving the player a tag called `duralib.
 
 A few examples of correctly made item (true/false convert into 1b/0b when item is given)
 ````mcfunction
-give @p diamond[max_stack_size=1,max_damage=32,custom_data={duralib:{damage_types:{player_attack_enemy:{enabled:true,amount:1}},slots:{mainhand:true},ignores_unbreaking:false,ignore_chance:0.0f,destory_on_break:true,break_item:"minecraft:diamond"}}] 1
-give @p stone[max_stack_size=1,max_damage=32,custom_data={duralib:{damage_types:{enemy_attack_player:{enabled:true,amount:1}},slots:{mainhand:true},ignores_unbreaking:false,ignore_chance:0.0f,destory_on_break:true,break_item:"minecraft:diamond"}}] 1
-give @p gold_ingot[max_stack_size=1,max_damage=32,custom_data={duralib:{damage_types:{place_block:{enabled:true,amount:1}},slots:{mainhand:true},ignores_unbreaking:false,ignore_chance:0.0f,destory_on_break:true,break_item:"minecraft:diamond"}}] 1
-give @p blaze_rod[max_stack_size=1,max_damage=32,custom_data={duralib:{damage_types:{killed_entity:{enabled:true,amount:1}},slots:{mainhand:true},ignores_unbreaking:false,ignore_chance:0.0f,destory_on_break:true,break_item:"minecraft:diamond"}}] 1
-give @p cobblestone[max_stack_size=1,max_damage=32,custom_data={duralib:{damage_types:{tick:{enabled:true,amount:1,condition:"walking"}},slots:{mainhand:true},ignores_unbreaking:false,ignore_chance:0.0f,destory_on_break:true,break_item:"minecraft:diamond"}}] 1
+give @p diamond[max_stack_size=1,max_damage=32,custom_data={duralib:{damage_types:{player_attack_enemy:{enabled:true,amount:1}},slots:{mainhand:true},ignores_unbreaking:false,ignore_chance:0.0f,destroy_on_break:true,break_item:"minecraft:diamond"}}] 1
+give @p stone[max_stack_size=1,max_damage=32,custom_data={duralib:{damage_types:{enemy_attack_player:{enabled:true,amount:1}},slots:{mainhand:true},ignores_unbreaking:false,ignore_chance:0.0f,destroy_on_break:true,break_item:"minecraft:diamond"}}] 1
+give @p gold_ingot[max_stack_size=1,max_damage=32,custom_data={duralib:{damage_types:{place_block:{enabled:true,amount:1}},slots:{mainhand:true},ignores_unbreaking:false,ignore_chance:0.0f,destroy_on_break:true,break_item:"minecraft:diamond"}}] 1
+give @p blaze_rod[max_stack_size=1,max_damage=32,custom_data={duralib:{damage_types:{killed_entity:{enabled:true,amount:1}},slots:{mainhand:true},ignores_unbreaking:false,ignore_chance:0.0f,destroy_on_break:true,break_item:"minecraft:diamond"}}] 1
+give @p cobblestone[max_stack_size=1,max_damage=32,custom_data={duralib:{damage_types:{tick:{enabled:true,amount:1,condition:"walking"}},slots:{mainhand:true},ignores_unbreaking:false,ignore_chance:0.0f,destroy_on_break:true,break_item:"minecraft:diamond"}}] 1
 ```` 
