@@ -1,62 +1,62 @@
 ````markdown
 - duralib:properties {}
-	- enabled <true/false> !
+	- enabled <bool> !
 	- active_slots {} !
-		- mainhand <true/false>
-		- offhand <true/false>
+		- mainhand <bool>
+		- offhand <bool>
 	- break_particle_item_id <string> !
-	- destroy_on_item_break <true/false> !
+	- destroy_on_item_break <bool> !
 	- damage_events {}
 		- placed_block {}
-			- enabled <true/false> !
+			- enabled <bool> !
 			- damage_events [{}]
 				- damage_chance <float> !
 				- damage_amount <int> ! 
-				- ignores_unbreaking <true/false> !
-	 			- condition <string> !
+				- ignores_unbreaking <bool> !
+				- condition <string> !
 				- max_damage <int> !
 		- player_attacked_enemy {}
-			- enabled <true/false> !
+			- enabled <bool> !
 			- damage_events [{}]
 				- damage_chance <float> !
 				- damage_amount <int> ! 
-				- ignores_unbreaking <true/false> !
-		 		- condition <string> !
+				- ignores_unbreaking <bool> !
+				- condition <string> !
 				- max_damage <int> !
 		- enemy_attacked_player {}
-			- enabled <true/false> !
+			- enabled <bool> !
 			- damage_events [{}]
 				- damage_chance <float> !
-	 		 			- damage_amount <int> ! 
-	 			 		- ignores_unbreaking <true/false> !
-	 			- condition <string> !
+						- damage_amount <int> ! 
+						- ignores_unbreaking <bool> !
+				- condition <string> !
 				- max_damage <int> !
 		- killed_enemy {}
-			- enabled <true/false>
+			- enabled <bool>
 			- damage_events [{}]
 				- damage_chance <float> !
 				- damage_amount <int> ! 
-				- ignores_unbreaking <true/false> !
-		 		- condition <string> !
+				- ignores_unbreaking <bool> !
+				- condition <string> !
 				- max_damage <int> !
 		- tick {}
-			- enabled <true/false>
+			- enabled <bool>
 			- damage_events [{}]
 				- damage_chance <float> !
 				- damage_amount <int> ! 
-				- ignores_unbreaking <true/false> !
-		 		- condition <string> !
-	 			 		- max_damage <int> !
+				- ignores_unbreaking <bool> !
+				- condition <string> !
+						- max_damage <int> !
 				- frequency <int> !
 				- timer <int> ?
- 		 - custom {}
-			- enabled <true/false>
+ 		- custom {}
+			- enabled <bool>
 			- damage_events [{}]
 				- damage_chance <float> !
 				- damage_amount <int> ! 
-				- ignores_unbreaking <true/false> !
-		 		- condition <string> !
+				- ignores_unbreaking <bool> !
+				- condition <string> !
 				- max_damage <int> !
-		 		- eventid <string> !
-	- is_broken <true/false> ?
+				- eventid <string> !
+	- is_broken <bool> ?
 ````
