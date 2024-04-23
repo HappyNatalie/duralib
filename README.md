@@ -19,6 +19,7 @@ For convenience this datapack requires no additional functions or input beyond t
 All data for this pack is stored in the `duralib:{}` data tag.
 Tags labeled with a ! are required for the system to work.
 Tags labled with a ? are not writeable and are just used for data storage.
+
 ````
 > duralib (namespace for all data related to this library other than the vanilla damage and max_damage components)
   > damage_types (PACK DOES NOT SUPPORT 2 OF THE SAME DAMAGE TYPE ON 1 ITEM)
