@@ -2,7 +2,9 @@
 ````
 - duralib {}
 	- enabled <true/false> !
-	- active_slots [<string>,<string>] !
+	- active_slots {} !
+		- mainhand <true/false>
+		- offhand <true/false>
 	- break_particle_item_id <string> !
 	- destroy_on_item_break <true/false> !
 	- damage_events {}
