@@ -1,6 +1,6 @@
 #reworking structure to function like the following
 ````
-- duralib {}
+- duralib:properties {}
 	- enabled <true/false> !
 	- active_slots {} !
 		- mainhand <true/false>
@@ -50,7 +50,7 @@
        		     		- max_damage <int> !
 				- frequency <int> !
 				- timer <int> ?
- 	       - event_custom
+ 	       - event_custom {}
 			- enabled <true/false>
 			- damage_events [{}]
 				- damage_chance <float> !
