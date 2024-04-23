@@ -66,7 +66,7 @@ Running either of these functions for a player triggers their `generic` `damage_
 function duralib:mainhand/event_generic
 function duralib:offhand/event_generic
 ````
-Here is a example of a correctly made item (true/false convert into 1b/0b when item is given)
+Here is a example of a correctly made item
 ````mcfunction
 give @p diamond[max_stack_size=1,max_damage=32,custom_data={duralib:{damage_types:{player_attack_enemy:{enabled:true,amount:1}},slots:{mainhand:true},ignores_unbreaking:false,ignore_chance:0.0f,destroy_on_break:true,break_item:"minecraft:diamond"}}] 1
 ````
