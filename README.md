@@ -8,7 +8,7 @@
 	- break_particle_item_id <string> !
 	- destroy_on_item_break <true/false> !
 	- damage_events {}
-        	- event_placed_block {}
+        	- placed_block {}
 			- enabled <true/false> !
 			- damage_events [{}]
 				- damage_chance <float> !
@@ -16,7 +16,7 @@
             			- ignores_unbreaking <true/false> !
            			- condition <string> !
             			- max_damage <int> !
-	        - event_player_attacked_enemy {}
+	        - player_attacked_enemy {}
 			- enabled <true/false> !
 			- damage_events [{}]
 				- damage_chance <float> !
@@ -24,7 +24,7 @@
 	            		- ignores_unbreaking <true/false> !
 	           		- condition <string> !
 	            		- max_damage <int> !
-	        - event_enemy_attacked_player {}
+	        - enemy_attacked_player {}
 			- enabled <true/false> !
 			- damage_events [{}]
 				- damage_chance <float> !
@@ -32,7 +32,7 @@
        		     		- ignores_unbreaking <true/false> !
            			- condition <string> !
             			- max_damage <int> !
-	        - event_killed_enemy {}
+	        - killed_enemy {}
 			- enabled <true/false>
 			- damage_events [{}]
 				- damage_chance <float> !
@@ -40,7 +40,7 @@
 	            		- ignores_unbreaking <true/false> !
 	           		- condition <string> !
 	            		- max_damage <int> !
-	        - event_tick {}
+	        - tick {}
 			- enabled <true/false>
 			- damage_events [{}]
 				- damage_chance <float> !
@@ -50,7 +50,7 @@
        		     		- max_damage <int> !
 				- frequency <int> !
 				- timer <int> ?
- 	       - event_custom {}
+ 	       - custom {}
 			- enabled <true/false>
 			- damage_events [{}]
 				- damage_chance <float> !
