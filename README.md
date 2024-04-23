@@ -49,7 +49,7 @@
 	           		- condition <string> !
        		     		- max_damage <int> !
 				- frequency <int> !
-				- timer <int> !
+				- timer <int> ?
  	       - event_custom
 			- enabled <true/false>
 			- damage_events [{}]
