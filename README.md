@@ -53,8 +53,9 @@ Tags labled with a ? are not writeable and are just used for data storage.
   > break_item:<string (valid minecraft item id)> ! (what particle shows when the item breaks)
   > broken:<true/false> ? (is set to true when destroy_on_break is set to false and item durability is at 0)
 ````
-You can add your own timed condition by giving the player a tag called `duralib.tracker.<custom_name>` then the custom name will be your condition name.
-
+Custom condition creation.
+Creating a custom condition is very simple just give the player the tag `duralib.tracking.<custom condition name>` when they meet your requirements.
+For instance to create the custom condition `"example"` I would give the player the `duralib.tracking.example` tag when I want it to be true and remove it when I want it to be false/
 
 
 A few examples of correctly made item (true/false convert into 1b/0b when item is given)
