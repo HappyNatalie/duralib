@@ -1,5 +1,8 @@
  # Durabiltiy Library
-I would like to start out by saying this might not be the most optimized way on the planet to do this I just threw this together ASAP to use for another project and figured I would put it up. I am not experienced at making library mods so please don't judge too hard on the poor optimization or weird implimentation. Feel freeto improve on this as there is def room to improve.
+I would like to start out by saying this might not be the most optimized way on the planet to do this I just threw this together ASAP to use for another project and figured I would put it up.
+It isn't the most optimal thing on the planet because im an idiot but I got it to where I can't tell if its on or not by the mspt on my crap computer so it's prolly fine.
+
+This pack works fully off of item data there is no need to modify functions or do anything of the sort just put the zip file in your datapacks folder and all the custom data tags will work with no extra messing around.
 
 Future Updates Planened :
 ``Block Broken Damage Type.``
@@ -57,8 +60,14 @@ Custom condition creation.
 Creating a custom condition is very simple just give the player the tag `duralib.tracking.<custom condition name>` when they meet your requirements.
 For instance to create the custom condition `"example"` I would give the player the `duralib.tracking.example` tag when I want it to be true and remove it when I want it to be false/
 
-
+Generic function
+Running either of these functions for a player triggers their `generic` `damage_type`. This is so you can easily damage items (for instance if you have a right click detector that you want to take durability).
+````mcfunction
+function duralib:mainhand/event_generic
+function duralib:offhand/event_generic
+````
 Here is a example of a correctly made item (true/false convert into 1b/0b when item is given)
 ````mcfunction
 give @p diamond[max_stack_size=1,max_damage=32,custom_data={duralib:{damage_types:{player_attack_enemy:{enabled:true,amount:1}},slots:{mainhand:true},ignores_unbreaking:false,ignore_chance:0.0f,destroy_on_break:true,break_item:"minecraft:diamond"}}] 1
-```` 
+````
+
