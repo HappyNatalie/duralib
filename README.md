@@ -11,7 +11,6 @@ Future Updates Planened :
 ``Support for the unbreakable tag``
 ``A tag that allows item to be damaged even when it is held by a creative player (This is disabled by defualt)``
 ``Generator for automatically assembling duralib tags``
-``Add conditions for all damage types``
 
 In the most recent update of minecraft (1.20.5) there is the ability to add a custom amount of durability but not the ability to customize how that durability gets consumed. The goal of this datapack is to add more customizability to the way durability is consumed.
 For convenience this datapack requires no additional functions or input beyond the setting of it's peramiters in an item's custom data though there is a function to dynamically damage an item.
