@@ -1,11 +1,11 @@
 # Durabiltiy Library
 I would like to start out by saying this might not be the most optimized way on the planet to do this I just threw this together ASAP to use for another project and figured I would put it up. I am not experienced at making library mods so please don't judge too hard on the poor optimization or weird implimentation. Feel freeto improve on this as there is def room to improve.
 
-Future Updates Planened : 
-Block Broken Damage Type
-Armor Support
-The ability to make it so tick functions work at a consistent rate rather than fully depending on rng
-Addition of more support for automated repair of items.
+Future Updates Planened :
+	  Block Broken Damage Type
+  	Armor Support
+  	The ability to make it so tick functions work at a consistent rate rather than fully depending on rng
+  	Addition of more support for automated repair of items.
 
 In the most recent update of minecraft (1.20.5) there is the ability to add a custom amount of durability but not the ability to customize how that durability gets consumed. The goal of this datapack is to add more customizability to the way durability is consumed.
 For convenience this datapack requires no additional functions or input beyond the setting of it's peramiters in an item's custom data though there is a function to dynamically damage an item.
