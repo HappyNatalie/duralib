@@ -1,0 +1,20 @@
+{
+	"criteria": {
+		"main": {
+			"trigger": "minecraft:tick",
+			"conditions": {
+				"player": {
+					"nbt": "{SelectedItem:{components:{\"minecraft:custom_data\":{duralib:{slots:{mainhand:1b},damage_types:{tick:{enabled:1b}}}}}}}"
+				}
+			}
+		}
+	},
+	"requirements": [
+		[
+			"main"
+		]
+	],
+	"rewards": {
+		"function": "duralib:mainhand/event_timed"
+	}
+}

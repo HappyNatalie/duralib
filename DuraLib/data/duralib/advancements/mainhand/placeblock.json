@@ -1,0 +1,20 @@
+{
+	"criteria": {
+		"main": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"player": {
+					"nbt": "{SelectedItem:{components:{\"minecraft:custom_data\":{duralib:{slots:{mainhand:1b},damage_types:{place_block:{enabled:1b}}}}}}}"
+				}
+			}
+		}
+	},
+	"requirements": [
+		[
+			"main"
+		]
+	],
+	"rewards": {
+		"function": "duralib:mainhand/event_placeblock"
+	}
+}

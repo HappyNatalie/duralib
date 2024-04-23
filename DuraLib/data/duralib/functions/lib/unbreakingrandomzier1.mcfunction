@@ -1,0 +1,10 @@
+execute if score %unbreaking% duralib matches 0 run scoreboard players operation %damage% duralib += %amount% duralib
+execute if score %unbreaking% duralib matches 1 unless predicate {"condition":"minecraft:random_chance","chance":0.5} run scoreboard players operation %damage% duralib += %amount% duralib
+execute if score %unbreaking% duralib matches 2 unless predicate {"condition":"minecraft:random_chance","chance":0.66} run scoreboard players operation %damage% duralib += %amount% duralib
+execute if score %unbreaking% duralib matches 3 unless predicate {"condition":"minecraft:random_chance","chance":0.75} run scoreboard players operation %damage% duralib += %amount% duralib
+execute if score %unbreaking% duralib matches 4 unless predicate {"condition":"minecraft:random_chance","chance":0.8} run scoreboard players operation %damage% duralib += %amount% duralib
+execute if score %unbreaking% duralib matches 5 unless predicate {"condition":"minecraft:random_chance","chance":0.83} run scoreboard players operation %damage% duralib += %amount% duralib
+execute if score %unbreaking% duralib matches 6 unless predicate {"condition":"minecraft:random_chance","chance":0.85} run scoreboard players operation %damage% duralib += %amount% duralib
+execute if score %unbreaking% duralib matches 7 unless predicate {"condition":"minecraft:random_chance","chance":0.875} run scoreboard players operation %damage% duralib += %amount% duralib
+execute if score %unbreaking% duralib matches 8 unless predicate {"condition":"minecraft:random_chance","chance":0.888} run scoreboard players operation %damage% duralib += %amount% duralib
+execute if score %unbreaking% duralib matches 9 unless predicate {"condition":"minecraft:random_chance","chance":0.9} run scoreboard players operation %damage% duralib += %amount% duralib
