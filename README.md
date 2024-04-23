@@ -1,4 +1,4 @@
-# Durabiltiy Library
+ # Durabiltiy Library
 I would like to start out by saying this might not be the most optimized way on the planet to do this I just threw this together ASAP to use for another project and figured I would put it up. I am not experienced at making library mods so please don't judge too hard on the poor optimization or weird implimentation. Feel freeto improve on this as there is def room to improve.
 
 Future Updates Planened :
@@ -6,7 +6,6 @@ Future Updates Planened :
 ``Armor Support.``
 ``The ability to make it so tick functions work at a consistent rate rather than fully depending on rng.``
 ``Addition of more support for automated repair of items.``
-``Generator for custom durability data.``
 ``Algorythm for unbreaking instead of hard coding to support levels above 10 (sorta pointless but I still wanna)`` 
 ``Support for the unbreakable tag``
 ``A tag that allows item to be damaged even when it is held by a creative player (This is disabled by defualt)``
