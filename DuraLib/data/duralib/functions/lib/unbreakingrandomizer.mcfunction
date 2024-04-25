@@ -1,1 +1,0 @@
-$execute unless predicate {"condition":"minecraft:random_chance","chance":$(ignore_chance)} run function duralib:lib/unbreakingrandomzier1

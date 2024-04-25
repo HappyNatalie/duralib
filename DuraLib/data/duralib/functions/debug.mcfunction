@@ -1,1 +1,0 @@
-advancement revoke @s everything
