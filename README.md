@@ -55,6 +55,7 @@
 				- event_id <string> !
 	- is_broken <bool> ?
 ````
+````
 Guide to all data fields
 
 Tags with a ! are required for their dataset to work.
@@ -89,4 +90,4 @@ duralib.damage_events.tick[{}].frequency: This is how often in ticks the damage 
 duralib.damage_events.tick[{}].timer: This is a readable tag that tracks how long until the next activation if frequency is set to a number that is not -1.
 duralib.damage_events.custom[{}].event_id: This id helps packs that add custom damage events control what damage events they activate at any given time. (See duralib.damage_events.custom for more information)
 
-This library is fully data driven and designed to just be dropped into a datapack folder alongside any datapack that uses it. Everything is fully data driven and with the exceptions of custom conditions and damage events this doesn't require any coding or tweaking on your part to use. Contact me at @happynatalie on discords with any questions about use or syntax.
+This library is fully data driven and designed to just be dropped into a datapack folder alongside any datapack that uses it. Everything is fully data driven and with the exceptions of custom conditions and damage events this doesn't require any coding or tweaking on your part to use. Contact me at @happynatalie on discords with any questions about use or syntax.````
