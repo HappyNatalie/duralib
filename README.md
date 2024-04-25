@@ -1,5 +1,5 @@
 ````markdown
-- duralib:properties {}
+- duralib {}
 	- enabled <bool> !
 	- active_slots {} !
 		- mainhand <bool>
