@@ -22,12 +22,12 @@
 				- damage_amount <int> ! 
 				- ignores_unbreaking <bool> !
 				- condition <string> !
-		- enemy_attacked_player {}
+		- player_took_damage {}
 			- enabled <bool> !
 			- damage_events [{}]
 				- damage_chance <float> !
-						- damage_amount <int> ! 
-						- ignores_unbreaking <bool> !
+				- damage_amount <int> ! 
+				- ignores_unbreaking <bool> !
 				- condition <string> !
 		- killed_enemy {}
 			- enabled <bool>
