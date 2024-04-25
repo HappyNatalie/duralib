@@ -22,7 +22,7 @@
 				- damage_amount <int> ! 
 				- ignores_unbreaking <bool> !
 				- condition <string> !
-		- player_took_damage {}
+		- enemy_attacked_player {}
 			- enabled <bool> !
 			- damage_events [{}]
 				- damage_chance <int> !
@@ -75,7 +75,7 @@ Damage event types
 
 duralib.damage_events.placed_block: Triggers when the player places a block.
 duralib.damage_events.player_attacked_enemy: Triggers whenever the player attacks any entity.
-duralib.damage_events.player_took_damage: Triggers whenever the player takes any form of damage.
+duralib.damage_events.enemy_attacked_player: Triggers whenever the player is attacked.
 duralib.damage_events.killed_enemy: Triggers whenever the player kills an entity.
 duralib.damage_events.tick: Triggers every tick.
 duralib.damage_events.custom: Triggers when called with a function. The function needs to be a run with a data storage that has the (event_id) tag set to work.
