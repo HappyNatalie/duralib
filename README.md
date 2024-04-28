@@ -119,13 +119,13 @@ Tick exlusive tags
 Custom Events (Designed for more advanced users than other features)
 
 >duralib.damage_events.custom[{}].event_id: This id helps packs that add custom damage events control what damage events they activate at any given time.
->In order to call an event by ID all you have to do is set a data storage to have the `trigger_event_id` data with the same string as your event id.
-Example: Lets say I wanted to call my custom event with the event_id `"event_1"`. All I need to do is store that string in a storage tag and run the function with it.
+>In order to call an event by ID all you have to do is set the `current` tag within the `duralib:searching` data storage to have the same string as your event id.
+Example: Lets say I wanted to call my custom event with the event_id `"my_datapack:event_1"`. All I need to do is store that string in a storage tag and run the function with it.
 ````mcfunction
-data modify storage testing:temp event set value "event_1"
-function duralib:customs/mainhand with storage testing:temp
+data modify storage duralib:searching current set value "my_datapack:event_1"
+function duralib:customs/mainhand
 ````
 Custom damage events still are required to have the rest of the data including enabling the custom catagory and setting active slots but other than that you can do basically anything.
-To avoid conflicts with other datapacks using this library it is HEAVILY suggested to store any custom event names under a namespace (For instance the one earlier would be `mydatapack:event_1`)
+To avoid conflicts with other datapacks using this library it is HEAVILY suggested to store any custom event names under a namespace (For instance `<my_pack>:very_cool_damage_event`)
 
 This library is fully data driven and designed to just be dropped into a datapack folder alongside any datapack that uses it. With the exceptions of custom conditions and damage events this doesn't require any coding or tweaking on your part to use. Contact me at @happynatalie on discord with any questions about use or syntax.
