@@ -124,7 +124,7 @@ Custom Events (Designed for more advanced users than other features)
 Example: Lets say I wanted to call my custom event with the event_id `"my_datapack:event_1"`. All I need to do is store that string in a storage tag and run the function with it.
 ````mcfunction
 data modify storage duralib:searching current set value "my_datapack:event_1"
-duralib:mainhand/custom/event
+function duralib:mainhand/custom/event
 ````
 Custom damage events still are required to have the rest of the data including enabling the custom catagory and setting active slots but other than that you can do basically anything.
 To avoid conflicts with other datapacks using this library it is HEAVILY suggested to store any custom event names under a namespace (For instance `<my_pack>:very_cool_damage_event`)
