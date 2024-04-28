@@ -92,10 +92,7 @@ def generate_minecraft_data_structure():
     }
     return data
 
-def save_data_to_file(data, filename):
-    with open(filename, 'w') as f:
-        json.dump(data, f, indent=4)
-
 if __name__ == "__main__":
     minecraft_data = generate_minecraft_data_structure()
-    save_data_to_file(minecraft_data, "datalib_tag.json")
+    json_data = json.dumps(minecraft_data, indent=4)
+    print("\"minecraft:custom_data\":",json_data)
