@@ -1,4 +1,5 @@
 import json
+import pyperclip
 
 def prompt_damage_event(event_name):
     enabled = input(f"Is damage event '{event_name}' enabled? (True/False): ").lower() == 'true'
@@ -77,7 +78,7 @@ def generate_minecraft_data_structure():
                 "offhand": input("Is offhand slot active? (True/False): ").lower() == 'true'
             },
             "break_particle_item_id": input("Enter break particle item ID: "),
-            "destroy_on_item_break": input("Destroy on item break? (True/False): ").lower() == 'true',
+            "destroy_on_item_break": input("Destroy item on durability running out? (True/False): ").lower() == 'true',
             "max_damage": int(input("Enter maximum damage: ")),
             "damage_events": {
                 "placed_block": prompt_damage_event("placed_block"),
