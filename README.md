@@ -1,7 +1,7 @@
 # Durability Library
 This library helps you manage durability of your items while being 100% data based and not requiring any tweaking of functions on your part.
 
-There is a python script linked below and uploaded to the repository that can generate data tags for this library. (Albiet in a scuffed way as I don't really know how to work with anything but mcfunction)
+There is a python script uploaded to the repository that can generate data tags for this library. I do not know how to create a UI or web app for it so it is really scuffed but it creates the tags correctly so thats all that really matters.
 
 # Data Structure
 ````markdown
