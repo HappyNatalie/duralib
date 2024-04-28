@@ -1,0 +1,36 @@
+struct DamageEvent {
+    damage_chance:  int @ 0..1000,
+    damage_amount: int,
+    ignores_unbreaking: boolean,
+    condition: ("always"),
+}
+dispatch mcdoc:custom_item_data[%all_items] to struct {
+    "duralib:properties": struct {
+        enabled: boolean,
+        is_broken: boolean,
+        active_slots: struct {
+            mainhand: boolean,   
+            offhand: boolean,  
+        },
+        break_particle: #[id=item] string,
+        destroy_on_broken: boolean,
+        damage_events: struct {
+            placed_block?: [DamageEvent],
+            player_attacked_enemy?: [DamageEvent],
+            enemy_attacked_player?: [DamageEvent],
+            killed_enemy?: [DamageEvent],
+            tick?: [
+                struct {
+                    ...DamageEvent,
+                    frequency: int @ 0..,
+                },
+            ],
+            custom?: [
+                struct {
+                    ...DamageEvent,
+                    event_id: string,
+                },
+            ],
+        },
+    },
+}
