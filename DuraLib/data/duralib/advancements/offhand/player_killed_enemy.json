@@ -1,0 +1,20 @@
+                                 {
+	"criteria": {
+		"main": {
+			"trigger": "minecraft:player_killed_entity",
+			"conditions": {
+				"player": {
+					"nbt": "{Inventory:[{Slot:-106b,components: {\"minecraft:custom_data\":{duralib:{enabled:1b,active_slots:{offhand:1b},damage_events:{player_killed_enemy:{enabled:1b}}}}}}]}"
+				}
+			}
+		}
+	},
+	"requirements": [
+		[
+			"main"
+		]
+	],
+	"rewards": {
+		"function": "duralib:offhand/player_killed_enemy/event"
+	}
+}

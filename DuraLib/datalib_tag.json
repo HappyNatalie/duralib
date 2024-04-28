@@ -1,0 +1,33 @@
+{
+    "duralib": {
+        "enabled": false,
+        "active_slots": {
+            "mainhand": false,
+            "offhand": false
+        },
+        "break_particle_item_id": "e",
+        "destroy_on_item_break": false,
+        "max_damage": 2,
+        "damage_events": {
+            "placed_block": {
+                "enabled": false
+            },
+            "player_attacked_enemy": {
+                "enabled": false
+            },
+            "enemy_attacked_player": {
+                "enabled": false
+            },
+            "killed_enemy": {
+                "enabled": false
+            },
+            "tick": {
+                "enabled": false
+            },
+            "custom": {
+                "enabled": false
+            }
+        },
+        "is_broken": false
+    }
+}

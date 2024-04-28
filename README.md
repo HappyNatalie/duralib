@@ -1,73 +1,131 @@
- # Durabiltiy Library
-I would like to start out by saying this might not be the most optimized way on the planet to do this I just threw this together ASAP to use for another project and figured I would put it up.
-It isn't the most optimal thing on the planet because im an idiot but I got it to where I can't tell if its on or not by the mspt on my crap computer so it's prolly fine.
+# Durability Library
+This library helps you manage durability of your items while being 100% data based and not requiring any tweaking of functions on your part.
 
-This pack works fully off of item data there is no need to modify functions or do anything of the sort just put the zip file in your datapacks folder and all the custom data tags will work with no extra messing around.
+There is a python script linked below and uploaded to the repository that can generate data tags for this library. (Albiet in a scuffed way as I don't really know how to work with anything but mcfunction)
 
-Future Updates Planened :
-``Block Broken Damage Type.``
-``Armor Support.``
-``The ability to make it so tick functions work at a consistent rate rather than fully depending on rng.``
-``Addition of more support for automated repair of items.``
-``Algorythm for unbreaking instead of hard coding to support levels above 10 (sorta pointless but I still wanna)`` 
-``Support for the unbreakable tag``
-``A tag that allows item to be damaged even when it is held by a creative player (This is disabled by defualt)``
-``Generator for automatically assembling duralib tags``
-
-In the most recent update of minecraft (1.20.5) there is the ability to add a custom amount of durability but not the ability to customize how that durability gets consumed. The goal of this datapack is to add more customizability to the way durability is consumed.
-For convenience this datapack requires no additional functions or input beyond the setting of it's peramiters in an item's custom data though there is a function to dynamically damage an item.
-
-All data for this pack is stored in the `duralib:{}` data tag.
-Tags labeled with a ! are required for the system to work.
-Tags labled with a ? are not writeable and are just used for data storage.
-
+# Data Structure
+````markdown
+- duralib {}
+	- enabled <bool> !
+	- active_slots {} !
+		- mainhand <bool>
+		- offhand <bool>
+	- break_particle_item_id <string> !
+	- destroy_on_item_break <bool> !
+	- max_damage <int>
+	- damage_events {}
+		- placed_block {}
+			- enabled <bool> !
+			- damage_events [{}]
+				- damage_chance <int> !
+				- damage_amount <int> ! 
+				- ignores_unbreaking <bool> !
+				- condition <string> !
+		- player_attacked_enemy {}
+			- enabled <bool> !
+			- damage_events [{}]
+				- damage_chance <int> !
+				- damage_amount <int> ! 
+				- ignores_unbreaking <bool> !
+				- condition <string> !
+		- enemy_attacked_player {}
+			- enabled <bool> !
+			- damage_events [{}]
+				- damage_chance <int> !
+				- damage_amount <int> ! 
+				- ignores_unbreaking <bool> !
+				- condition <string> !
+		- killed_enemy {}
+			- enabled <bool>
+			- damage_events [{}]
+				- damage_chance <int> !
+				- damage_amount <int> ! 
+				- ignores_unbreaking <bool> !
+				- condition <string> !
+		- tick {}
+			- enabled <bool>
+			- damage_events [{}]
+				- damage_chance <int> !
+				- damage_amount <int> ! 
+				- ignores_unbreaking <bool> !
+				- condition <string> !
+				- frequency <int> !
+				- timer <int> ?
+        - custom {}
+			- enabled <bool>
+			- damage_events [{}]
+				- damage_chance <int> !
+				- damage_amount <int> ! 
+				- ignores_unbreaking <bool> !
+				- condition <string> !
+				- event_id <string> !
+	- is_broken <bool> ?
 ````
-> duralib (namespace for all data related to this library other than the vanilla damage and max_damage components)
-  > damage_types (PACK DOES NOT SUPPORT 2 OF THE SAME DAMAGE TYPE ON 1 ITEM)
-    > place_block (triggers whenever you place a block)
-      > enabled:<true/false> (if this damage type can be triggered)
-      > amount:<int> (how much damage is dealt to the item when this damage type is triggered)
-    > player_attack_enemy (triggers whenever you attack an enemy)
-      > enabled:<true/false> (if this damage type can be triggered)
-      > amount:<int> (how much damage is dealt to the item when this damage type is triggered)
-    > enemy_attack_player (triggers whenever you take damage rom something)
-      > enabled:<true/false> (if this damage type can be triggered)
-      > amount:<int> (how much damage is dealt to the item when this damage type is triggered)
-    > killed_entity (triggers whenever you kill something)
-      > enabled:<true/false> (if this damage type can be triggered)
-      > amount:<int> (how much damage is dealt to the item when this damage type is triggered)
-    > generic (for use in functions)
-      > amount:<int>  (how much damage is dealt to the item when this damage type is triggered)
-    > tick (triggers every tick)
-      > enabled:<true/false> (if this damage type can be triggered)
-      > amount:<int> (how much damage is dealt to the item when this damage type is triggered)
-      > condition:<tag> !  (the condition required for the durability to change)
-        > "always" (always on)
-        > "swimming" (only when your moving it water)
-        > "walking" (only when your moving while not flying or in water)
-        > "crouching" (only while holding crouch)
-        > "using_elytra" (only while flying with an elytra)
-  > slots (determines what slots the item is considered as being used when its in)
-    > mainhand:<true/false>
-    > offhand:<true/false>
-  > ignores_unbreaking:<true/false> ! (if the item ignores the unbreaking enchantment)
-  > ignore_chance:<float> ! (the percent change to not reduce the damage)
-  > destroy_on_break:<true/false> ! (if the item is destroyed when it reaches 0 durability)
-  > break_item:<string (valid minecraft item id)> ! (what particle shows when the item breaks)
-  > broken:<true/false> ? (is set to true when destroy_on_break is set to false and item durability is at 0)
-````
-Custom condition creation.
-Creating a custom condition is very simple just give the player the tag `duralib.tracking.<custom condition name>` when they meet your requirements.
-For instance to create the custom condition `"example"` I would give the player the `duralib.tracking.example` tag when I want it to be true and remove it when I want it to be false/
+Guide to all data fields
 
-Generic function
-Running either of these functions for a player triggers their `generic` `damage_type`. This is so you can easily damage items (for instance if you have a right click detector that you want to take durability).
+Tags with a ! are required for their dataset to work.
+Tags with a ? are read only and exist only for developers to be able to read data from the system.
+
+>duralib: The general field where all data for this pack is stored.
+
+>duralib.enabled: Controls if the durability system is on or off. (This mainly exists to make it easier for datapacks to toggle the system freely on existing items via item modifiers)
+
+>duralib.active_slots.(Any value that can go in this data set): Controls what slots the durability system will recognize the item as being currently equipped in.
+
+>duralib.break_particle_item_id: The string of the id of any minecraft item you want to act as the particle when the item breaks.
+
+>duralib.destroy_on_item_break: If the item will be destroyed on reaching 0 durability. (Pack prevents going into negitive durability values)
+
+>duralib.is_broken: This is a is a readable tag that tells if an item with destroy_on_item_break is broken (at 0 durability) or not.
+
+>duralib.max_damage: The max damage of an item needs to be set in the duralib settings alongside the item component. They should be equal to each other to avoid cosmetic desync of the durability meter.
+
+>duralib.damage_events: Damage events are things that can happen in game to damage the item.
+
+Damage event types
+>duralib.damage_events.placed_block: Triggers when the player places a block.
+
+>duralib.damage_events.player_attacked_enemy: Triggers whenever the player attacks any entity.
+
+>duralib.damage_events.enemy_attacked_player: Triggers whenever the player is attacked by any entity.
+
+>duralib.damage_events.killed_enemy: Triggers whenever the player kills an entity.
+
+>duralib.damage_events.tick: Triggers every tick.
+
+>duralib.damage_events.custom: Triggers when called with a function.
+
+Damage event data tags
+>duralib.damage_events.(Any damage event type).enabled: This bool determines if the damage events in the type will be checked (This exists for optimization reasons)
+
+
+>duralib.damage_events.(Any damage event type)[{}].damage_chance: This is the X/1000 chance that the damage event will occur. For instance a damage event with a damage_chance of 250 has a 25% chance to occur. Any number 1000 or over will have a 100% chance. Any
+
+>negitive number will have a 0% chance.
+
+>duralib.damage_events.(Any damage event type)[{}].damage_amount: This is the amount of damage this damage event will inflict.
+
+>duralib.damage_events.(Any damage event type)[{}].ignores_unbreaking: This determines if the event will ignore unbreaking when calculating if the item should take damage from the current damage event.
+
+>duralib.damage_events.(Any damage event type)[{}].condition: This is the condition required for the damage event to occur it will always fail if this is not set. The default condition is "always" and will never be false. In order to create a condition simply
+>make a tag called duralib.condition.<my_condition> then that tag will act as a condition under the name "my_condition". There will be a pack coming in the near future with a set of pre made conditions for convenience sake. These are not being included in the >main pack as they will be more expensive then the main pack to run and I do not want to loose optimization for said feature unless you are actually loosing it.
+
+Tick exlusive tags
+
+>duralib.damage_events.tick[{}].frequency: This is how often in ticks the damage event will occur. (For instance a frequency of 10 will occur on every tenth tick) If you want an event to occur every tick set this to -1 as it is hardcoded to skip the counting process if it is set to -1 for optimization reasons.
+
+>duralib.damage_events.tick[{}].timer: This is a readable tag that tracks how long until the next activation if frequency is set to a number that is not -1.
+
+Custom Events (Designed for more advanced users than other features)
+
+>duralib.damage_events.custom[{}].event_id: This id helps packs that add custom damage events control what damage events they activate at any given time.
+>In order to call an event by ID all you have to do is set a data storage to have the `trigger_event_id` data with the same string as your event id.
+Example: Lets say I wanted to call my custom event with the event_id `"event_1"`. All I need to do is store that string in a storage tag and run the function with it.
 ````mcfunction
-function duralib:mainhand/event_generic
-function duralib:offhand/event_generic
+data modify storage testing:temp event set value "event_1"
+function duralib:customs/mainhand with storage testing:temp
 ````
-Here is a example of a correctly made item
-````mcfunction
-give @p diamond[max_stack_size=1,max_damage=32,custom_data={duralib:{damage_types:{player_attack_enemy:{enabled:true,amount:1}},slots:{mainhand:true},ignores_unbreaking:false,ignore_chance:0.0f,destroy_on_break:true,break_item:"minecraft:diamond"}}] 1
-````
+Custom damage events still are required to have the rest of the data including enabling the custom catagory and setting active slots but other than that you can do basically anything.
+To avoid conflicts with other datapacks using this library it is HEAVILY suggested to store any custom event names under a namespace (For instance the one earlier would be `mydatapack:event_1`)
 
+This library is fully data driven and designed to just be dropped into a datapack folder alongside any datapack that uses it. With the exceptions of custom conditions and damage events this doesn't require any coding or tweaking on your part to use. Contact me at @happynatalie on discord with any questions about use or syntax.
