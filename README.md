@@ -1,3 +1,9 @@
+# Durability Library
+This library helps you manage durability of your items while being 100% data based and not requiring any tweaking of functions on your part.
+
+
+
+# Data Structure
 ````markdown
 - duralib {}
 	- enabled <bool> !
@@ -122,4 +128,4 @@ function duralib:customs/mainhand with storage testing:temp
 Custom damage events still are required to have the rest of the data including enabling the custom catagory and setting active slots but other than that you can do basically anything.
 To avoid conflicts with other datapacks using this library it is HEAVILY suggested to store any custom event names under a namespace (For instance the one earlier would be `mydatapack:event_1`)
 
-This library is fully data driven and designed to just be dropped into a datapack folder alongside any datapack that uses it. Everything is fully data driven and with the exceptions of custom conditions and damage events this doesn't require any coding or tweaking on your part to use. Contact me at @happynatalie on discords with any questions about use or syntax.
+This library is fully data driven and designed to just be dropped into a datapack folder alongside any datapack that uses it. With the exceptions of custom conditions and damage events this doesn't require any coding or tweaking on your part to use. Contact me at @happynatalie on discord with any questions about use or syntax.
