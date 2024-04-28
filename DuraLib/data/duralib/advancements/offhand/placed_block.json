@@ -1,0 +1,20 @@
+                                 {
+	"criteria": {
+		"main": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"player": {
+					"nbt": "{Inventory:[{Slot:-106b,components: {\"minecraft:custom_data\":{duralib:{enabled:1b,active_slots:{offhand:1b},damage_events:{placed_block:{enabled:1b}}}}}}]}"
+				}
+			}
+		}
+	},
+	"requirements": [
+		[
+			"main"
+		]
+	],
+	"rewards": {
+		"function": "duralib:offhand/placed_block/event"
+	}
+}

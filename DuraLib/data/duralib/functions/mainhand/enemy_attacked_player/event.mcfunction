@@ -6,4 +6,3 @@ tag @s add duralib.player
 execute summon item_display run function duralib:mainhand/enemy_attacked_player/as_temp_entity
 #reset player tag
 tag @s remove duralib.player
-say test
