@@ -119,7 +119,7 @@ Tick exlusive tags
 Custom Events (Designed for more advanced users than other features)
 
 >duralib.damage_events.custom[{}].event_id: This id helps packs that add custom damage events control what damage events they activate at any given time.
->In order to call an event by ID all you have to do is set the `current` tag within the `duralib:searching` data storage to have the same string as your event id then run the ``duralib:<slot>/custom/event`` function. I decided not to have this be a macro because >there is really no need and the performence will be better for it.
+>In order to call an event by ID all you have to do is set the `current` tag within the `duralib:searching` data storage to have the same string as your event id then run the ``duralib:<slot>/custom/event`` function. I decided not to have this be a macro because there is really no need and the performence will be better for it.
 Example: Lets say I wanted to call my custom event with the event_id `"my_datapack:event_1"`. All I need to do is store that string in a storage tag and run the function with it.
 ````mcfunction
 data modify storage duralib:searching current set value "my_datapack:event_1"
