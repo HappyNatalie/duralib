@@ -1,5 +1,4 @@
 import json
-import pyperclip
 
 def prompt_damage_event(event_name):
     enabled = input(f"Is damage event '{event_name}' enabled? (True/False): ").lower() == 'true'
